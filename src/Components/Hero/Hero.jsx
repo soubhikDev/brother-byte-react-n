@@ -16,10 +16,10 @@ export default function Hero() {
                     <h1>Food Delivery</h1>
                     <h2>To your seat at the</h2>
                     <h2>next bus stop</h2>
-                    <div className="HomeBannerBTN">
+                    {/* <div className="HomeBannerBTN">
                         <button className="HomeBannerBTN1" onClick={() => navigate("/menu")}>Order Now</button>
                         <button className="HomeBannerBTN2" onClick={() => navigate("/contact")}>Call Now</button>
-                    </div>
+                    </div> */}
                 </div>
                 <img src={BannerHero} alt="Banner" />
             </div>
