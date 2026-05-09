@@ -1,0 +1,366 @@
+/* ============================================
+   HomeDocument — Modern Editorial Design
+   ============================================ */
+
+.HomeDocumentSection {
+  padding: 90px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Section Header ── */
+.HomeDocumentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.SectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.SectionTag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #e20613;
+  background: rgba(226, 6, 19, 0.08);
+  border: 1px solid rgba(226, 6, 19, 0.18);
+  border-radius: 100px;
+  padding: 5px 16px;
+}
+
+.SectionTitle {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1a1a1a;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.TitleHighlight {
+  background: linear-gradient(135deg, #e20613 0%, #c8000f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.SectionSubtitle {
+  font-size: 1rem;
+  color: #6b6b6b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Blocks Grid ── */
+.HomeDocumentBlocks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Single Block ── */
+.DocumentBlock {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  animation: blockReveal 0.5s ease-out both;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes blockReveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.DocumentBlock:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.09);
+  border-color: rgba(226, 6, 19, 0.15);
+}
+
+/* ── Left Panel ── */
+.BlockLeft {
+  background: linear-gradient(160deg, #fff5f5 0%, #fff0f0 100%);
+  border-right: 1px solid rgba(226, 6, 19, 0.1);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.BlockMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.BlockIcon {
+  font-size: 1.8rem;
+  line-height: 1;
+  display: block;
+}
+
+.BlockTag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #e20613;
+  opacity: 0.85;
+}
+
+.BlockStat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.StatValue {
+  font-size: 1.9rem;
+  font-weight: 900;
+  color: #e20613;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.StatLabel {
+  font-size: 0.72rem;
+  color: #888;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+}
+
+/* ── Right Panel ── */
+.BlockRight {
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* ── Block Title ── */
+.BlockTitle {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+}
+
+/* ── Highlighted Text ── */
+.BlockHighlight {
+  display: inline;
+  background: linear-gradient(135deg, #e20613 0%, #b8000d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+/* ── Body Text ── */
+.DocumentBlock .CommonPera {
+  color: #555;
+  font-size: 0.93rem;
+  line-height: 1.85;
+  margin: 0;
+  text-align: left;
+  white-space: pre-line;
+  max-width: none;
+}
+
+/* ── Toggle Button ── */
+.DocumentButtonContainer {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.DocumentToggleButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 44px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #e20613;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(226, 6, 19, 0.28);
+}
+
+.DocumentToggleButton:hover {
+  background: #c8000f;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(226, 6, 19, 0.38);
+}
+
+.DocumentToggleButton:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(226, 6, 19, 0.2);
+}
+
+.BtnArrow {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.DocumentToggleButton:hover .BtnArrow {
+  transform: translateY(2px);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .HomeDocumentSection {
+    padding: 70px 0 60px;
+  }
+
+  .DocumentBlock {
+    grid-template-columns: 160px 1fr;
+  }
+
+  .BlockRight {
+    padding: 28px 28px;
+  }
+
+  .StatValue {
+    font-size: 1.65rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .HomeDocumentSection {
+    padding: 56px 0 50px;
+  }
+
+  .HomeDocumentContainer {
+    gap: 44px;
+  }
+
+  .DocumentBlock {
+    grid-template-columns: 1fr;
+    border-radius: 16px;
+  }
+
+  .BlockLeft {
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 24px;
+    border-right: none;
+    border-bottom: 1px solid rgba(226, 6, 19, 0.1);
+    gap: 16px;
+  }
+
+  .BlockMeta {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .BlockIcon {
+    font-size: 1.4rem;
+  }
+
+  .BlockStat {
+    margin-left: auto;
+    text-align: right;
+  }
+
+  .StatValue {
+    font-size: 1.5rem;
+  }
+
+  .BlockRight {
+    padding: 22px 24px;
+    gap: 12px;
+  }
+
+  .BlockTitle {
+    font-size: 1.05rem;
+  }
+
+  .DocumentBlock .CommonPera {
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .HomeDocumentSection {
+    padding: 44px 0 40px;
+  }
+
+  .HomeDocumentContainer {
+    gap: 36px;
+  }
+
+  .HomeDocumentBlocks {
+    gap: 14px;
+  }
+
+  .SectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .DocumentBlock {
+    border-radius: 14px;
+  }
+
+  .BlockLeft {
+    padding: 16px 18px;
+  }
+
+  .BlockRight {
+    padding: 18px 18px;
+  }
+
+  .BlockTitle {
+    font-size: 0.98rem;
+  }
+
+  .DocumentBlock .CommonPera {
+    font-size: 0.85rem;
+    line-height: 1.75;
+  }
+
+  .DocumentToggleButton {
+    padding: 12px 32px;
+    font-size: 0.82rem;
+  }
+
+  .StatValue {
+    font-size: 1.35rem;
+  }
+}

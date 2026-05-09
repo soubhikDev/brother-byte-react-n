@@ -1,0 +1,307 @@
+.DiscountMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    width: 100%;
+    background: linear-gradient(180deg,var(--amber)0%,var(--gold-pale) 100%);
+    /* min-height: 340px; */
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 100px;
+
+}
+.imageDiscountSection {
+    width: 40%;
+    margin-right: 20px;
+    position: relative;
+}
+.imageDiscountSection img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 520px;
+}
+.textDiscountSection {
+    width: 100%;
+    background: var(--warm-white);  
+    height: 100%;
+    padding: 30px;
+    border-radius: 10px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.textDiscountSection h1{
+    font-size: 4svw;
+    line-height: 4svw;
+    font-weight: 900;
+    color: #84b522;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.textDiscountSection h2{
+    font-size: 2svw;
+    font-weight: 900;
+    color: #b57322;
+    margin-top: -50px;
+    text-transform: uppercase;
+}
+.DiscountMain .inputSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.DiscountMain .MuiTextField-root{
+    width: 80%;
+}
+.DiscountMain .css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+    color: var(--amber) !important;
+}
+.DiscountMain .css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+    border-color: var(--amber) !important;
+}
+.DiscountMain .css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input{
+    color: #84b522 !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+}
+.DiscountMain .MuiButtonBase-root{
+    background: var(--amber) !important;
+    color: #ffffff !important;
+    height: 100%;
+    width: 20%;
+    border-radius: 30px !important;
+
+}
+.coponesWrpr{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.couponsMapWrpr{
+    background: #3fbeab36;
+    padding: 20px;
+    padding-left: 3.5svw;
+    border: #268a7b71 solid 1px;
+    border-radius: 10px;
+    position: relative;
+}
+.couponsMapWrpr:nth-child(2){
+    background: #be3f8736;
+    border: #8a265871 solid 1px;
+}
+.couponsMapWrpr:nth-child(3){
+    background: #be8f3f36;
+    border: #8a672671 solid 1px;
+}
+.couponsMapWrpr:nth-child(2) h1{
+    color: #8a2658;
+}
+.couponsMapWrpr:nth-child(3) h1{
+    color: #8a6726;
+}
+.couponsMapWrpr h1{
+    font-size: 3svw;
+    line-height: 50px;
+    position: absolute;
+    left:-1.1svw;
+    top: 50%;
+    transform: translateY(-50%) rotate(270deg);
+    color: #268a7b;
+    text-transform: uppercase;
+    margin: 0;
+}
+.couponsMapWrpr h2 {
+    font-size: 1.3svw;
+    font-weight: 400;
+    color: #0b5f51;
+    margin-top: unset;
+    text-transform: uppercase;
+}
+.couponsMapWrpr:nth-child(3) h2 {
+    color: #8a6726;
+}
+.couponsMapWrpr:nth-child(2) h2 {
+    color: #8a2658;
+}
+
+.couponsMapWrpr h3 {
+    font-size: 1.1svw;
+    font-weight: 400;
+    color: #6fa700;
+    margin-top: unset;
+    text-transform: uppercase;
+}
+.couponsMapWrpr h4 {
+    font-size: .9svw;
+    font-weight: 400;
+    color: #d40000;
+    margin-top: unset;
+    text-transform: uppercase;
+}
+@media screen and (max-width: 1499px) {
+    .imageDiscountSection img{
+        width: 440px;
+    }
+    .textDiscountSection h1{
+        font-size: 4.5svw;
+        margin-bottom: 20px;
+    }
+    .couponsMapWrpr h1{
+    font-size: 3svw;
+    }
+}
+@media screen and (max-width: 1299px) {
+    .imageDiscountSection img{
+        width: 400px;
+    }
+    .textDiscountSection h1{
+        font-size: 4svw;
+        margin-bottom: 30px;
+    }
+    .couponsMapWrpr h1{
+    font-size: 3svw;
+    }
+}
+@media screen and (max-width: 1199px){
+    .imageDiscountSection {
+    width: 100%;
+    margin-right: auto;
+    }
+    .DiscountMain{
+        flex-direction: column;
+        margin-top: 100px;
+        aspect-ratio: unset;
+        min-height: unset;
+    }
+    .textDiscountSection {
+        width: 100%;
+        padding: 20px;
+        position: relative;
+        z-index: 1;
+    }
+    .imageDiscountSection img{
+        display: none;
+    }
+    .textDiscountSection h1 {
+        font-size: 60px;
+        margin-bottom: 20px;
+        line-height: 60px;
+    }
+    .couponsMapWrpr h2 {
+    font-size: 4svh;
+    margin-top: unset;
+    line-height: 30px;
+    margin-bottom: 10px;
+    }
+    .inputSection button{
+        height: 56px;
+    }
+    .couponsMapWrpr h1{
+        font-size: 5svw;
+    }
+    .couponsMapWrpr{
+        padding-left: 7.5svw;
+    }
+    .couponsMapWrpr h3 {
+    font-size: 2.3svw;
+    line-height: 2svw;
+    }
+    .couponsMapWrpr h4 {
+    font-size: 1.6svw;
+    line-height: 1.6svw;
+    margin-top: 1.6svh;
+    }
+}
+@media screen and (max-width: 999px){
+    .couponsMapWrpr h2 {
+        font-size: 3.2svh;
+    }
+        .couponsMapWrpr h3 {
+        font-size: 1.9svw;
+        line-height: 1.5svw;
+    }
+        .couponsMapWrpr h4 {
+        font-size: 1.4svw;
+        line-height: 1.3svw;
+        }
+        
+}
+@media screen and (max-width: 799px){
+        .coponesWrpr {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .couponsMapWrpr h1 {
+        font-size: 40px !important;
+    }
+    .couponsMapWrpr h2 {
+        font-size: 25px;
+    }
+    .couponsMapWrpr h3 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .couponsMapWrpr h4 {
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .couponsMapWrpr {
+        padding-left: 65px;
+    }
+    .fs-section{
+        padding: 0;
+    }
+}
+@media screen and (max-width: 699px){
+    .DiscountMain .MuiButtonBase-root{
+        width: 120px;
+    }
+    .textDiscountSection h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    
+    .inputSection{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .inputSection .MuiTextField-root{
+        width: 100%;
+    }
+    .inputSection button{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 499px){
+    .textDiscountSection h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .textDiscountSection{
+        padding: 10px;
+    }
+    
+}
+@media screen and (max-width: 399px){
+    .couponsMapWrpr h4 {
+        font-size: 14px;
+    }
+    .couponsMapWrpr{
+        padding: 10px;
+        padding-left: 60px;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+

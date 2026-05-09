@@ -1,0 +1,229 @@
+.ContactMain .PageHeroMain{
+    background: url(/src/assets/ContactHeroBackground.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ContactMain h2{
+        font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: #84b524;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-top: 50px;
+}
+.ContactMain h2 span{
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.ContactMain p{
+        font-size: 15px;
+    color: var(--muted);
+    margin-top: 20px;
+    font-weight: 300;
+    max-width: 660px;
+    margin-inline: auto;
+    line-height: 1.7;
+    text-align: center;
+}
+.C_form_main{
+  padding: 20px;
+  border-radius: 15px;
+  border: var(--primary_100) solid 1px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.contact_map{
+  aspect-ratio: 3/1;
+  margin-bottom: 50px;
+  overflow: hidden;
+  border: var(--primary_100) solid 3px;
+  border-radius: 15px;
+}
+.ContactWrpr{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 0;
+    width: 100%;
+    gap: 30px;
+}
+.ContactImG{
+    width: 50%;
+    border-radius: 16px;
+
+}
+.ContactItem {
+  background:#fff0f0;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 24px 28px;
+  width:50%;
+}
+
+/* ── Header ── */
+.ContactItem-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.ContactItem-icon-wrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ff5722;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ContactItem-icon-wrap svg {
+  width: 16px;
+  height: 16px;
+  stroke: #ffffff;
+}
+
+.ContactItem h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* ── Rows ── */
+.ContactItem-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    height: calc(100% - 72px);
+    justify-content: space-evenly;
+
+}
+
+.ContactItem-row {
+    display: flex;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    align-items: center;
+    height: 100%;
+}
+
+.ContactItem-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.ContactItem-row-icon {
+    width: 62px;
+    height: 62px;
+    background: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s;
+
+}
+
+.ContactItem-row:hover .ContactItem-row-icon {
+  background: rgba(255, 87, 34, 0.1);
+}
+
+.ContactItem-row-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: #d60000;
+}
+
+.ContactItem-row-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ContactItem-row-label {
+font-size: 20px;
+    font-weight: 500;
+    color: #999;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.ContactItem-row-value {
+    font-size: 22px;
+    font-weight: 400;
+    color: #1a1a1a;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.ContactItem-row-value.is-link {
+  color: #ff5722;
+  text-decoration: none;
+}
+
+.ContactItem-row-value.is-link:hover {
+  text-decoration: underline;
+}
+.ContactMain .PageHeroSub .mainImgPH{
+transform: translateX(-50%) rotate(0deg) !important;
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 999px) {
+  .ContactWrpr{
+    flex-direction: column;
+  }
+  .ContactImG, .ContactItem{
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .ContactItem {
+    padding: 18px 20px;
+    max-width: 100%;
+  }
+  .ContactItem h3 {
+    font-size: 20px;
+  }
+  .ContactItem-row-icon {
+    width: 52px;
+    height: 52px;
+  }
+  .ContactItem-row-label {
+    font-size: 16px;
+  }
+  .ContactItem-row-value {
+    font-size: 18px;
+  }
+
+}
+@media (max-width: 399px){
+.ContactItem-row-label {
+        font-size: 14px;
+    }
+    .ContactItem-row-value {
+        font-size: 14px;
+    }
+}
+
+
+
+
+

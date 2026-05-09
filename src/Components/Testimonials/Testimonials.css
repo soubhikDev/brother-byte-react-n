@@ -1,0 +1,338 @@
+/* ─── Section ─────────────────────────────────────────────── */
+.TestimonialsSection {
+  position: relative;
+  padding: 100px 0 80px;
+  background: linear-gradient(160deg, var(--warm-white, #fff9f5) 0%, var(--cream, #fff3ec) 100%);
+  overflow: hidden;
+}
+
+/* Decorative blobs */
+.T_Blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: 0;
+}
+.T_Blob--left {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(226,6,19,0.35) 0%, transparent 70%);
+  top: -80px;
+  left: -120px;
+}
+.T_Blob--right {
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(255,140,60,0.3) 0%, transparent 70%);
+  bottom: -60px;
+  right: -80px;
+}
+
+/* ─── Layout ──────────────────────────────────────────────── */
+.TestimonialsContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* ─── Header ──────────────────────────────────────────────── */
+.TestimonialsHeader {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.TestimonialsLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--primary_100, #e20613);
+}
+.TestimonialsLabel::before,
+.TestimonialsLabel::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary_100, #e20613), rgba(226,6,19,0.25));
+  border-radius: 2px;
+}
+.TestimonialsLabel::after {
+  background: linear-gradient(270deg, var(--primary_100, #e20613), rgba(226,6,19,0.25));
+}
+
+.CommonHeader span {
+  color: var(--primary_100, #e20613);
+}
+
+.TestimonialsSubtext {
+  margin-top: 10px;
+  color: var(--text_200, #888);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* ─── Panel ───────────────────────────────────────────────── */
+.TestimonialsPanel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ─── Nav Buttons ─────────────────────────────────────────── */
+.TestimonialsNavButton {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  border: 1.5px solid rgba(226,6,19,0.18);
+  background: rgba(255,255,255,0.9);
+  color: var(--primary_100, #e20613);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+}
+.TestimonialsNavButton svg {
+  width: 20px;
+  height: 20px;
+}
+.TestimonialsNavButton:hover {
+  background: var(--primary_100, #e20613);
+  color: #fff;
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(226,6,19,0.22);
+}
+.TestimonialsNavButton:hover svg {
+  stroke: #fff;
+}
+
+/* ─── Carousel ────────────────────────────────────────────── */
+.TestimonialsCarousel {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.TestimonialsTrack {
+  display: flex;
+  transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 20px 0;
+}
+
+/* Each "group" is one slide = 100% of carousel width */
+.TestimonialsGroup {
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 4px 2px;
+}
+
+/* ─── Card ────────────────────────────────────────────────── */
+.TestimonialCard {
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1.5px solid rgba(226,6,19,0.08);
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.TestimonialCard::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(226,6,19,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+.TestimonialCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(226,6,19,0.18);
+  box-shadow: 0 21px 10px -21px var(--bg_B520);
+}
+
+/* Top row: avatar + meta + quote mark */
+.TC_Top {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.TestimonialAvatar {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(226,6,19,0.14), rgba(226,6,19,0.04));
+  color: var(--primary_100, #e20613);
+  font-weight: 800;
+  font-size: 1.1rem;
+  display: grid;
+  place-items: center;
+  border: 1.5px solid rgba(226,6,19,0.1);
+}
+
+.TC_Meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.TC_Meta h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text_100, #1a1a2e);
+}
+.TC_Subject {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary_100, #e20613);
+  opacity: 0.85;
+}
+.TC_Tag {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text_200, #888);
+  background: rgba(0,0,0,0.05);
+  padding: 2px 8px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.TC_Quote {
+  font-size: 3.5rem;
+  line-height: 0.8;
+  color: var(--primary_100, #e20613);
+  opacity: 0.15;
+  font-family: Georgia, serif;
+  font-weight: 900;
+  align-self: flex-start;
+  margin-top: -4px;
+}
+
+/* Description */
+.TC_Desc {
+  color: var(--text_200, #666);
+  line-height: 1.78;
+  font-size: 0.95rem;
+  margin: 0;
+  flex: 1;
+}
+
+/* Footer */
+.TC_Footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.TestimonialRating {
+  display: flex;
+  gap: 3px;
+}
+.Star {
+  color: #f5a623;
+  font-size: 0.95rem;
+}
+
+.TC_Verified {
+  font-size: 0.73rem;
+  font-weight: 700;
+  color: #2da44e;
+  letter-spacing: 0.02em;
+}
+
+/* ─── Dots ────────────────────────────────────────────────── */
+.TestimonialsDots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.TestimonialsDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.14);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+.TestimonialsDot.active {
+  background: var(--primary_100, #e20613);
+  transform: scale(1.35);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ─── Responsive ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .TestimonialsGroup {
+    gap: 14px;
+  }
+  .TestimonialCard {
+    padding: 22px 20px 18px;
+  }
+}
+
+/* On mobile: single card (JS sets cardsToShow=1 → group has 1 item → grid is 1 col) */
+@media (max-width: 640px) {
+  .TestimonialsSection {
+    padding: 70px 0 60px;
+  }
+  .TestimonialsPanel {
+    gap: 10px;
+  }
+  .TestimonialsGroup {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .TestimonialsNavButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+  .TestimonialsNavButton svg {
+    width: 18px;
+    height: 18px;
+  }
+  .TestimonialCard {
+    padding: 20px 18px 16px;
+    border-radius: 18px;
+  }
+  .TC_Quote {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .TC_Meta h2 {
+    font-size: 0.98rem;
+  }
+  .TC_Desc {
+    font-size: 0.9rem;
+  }
+}

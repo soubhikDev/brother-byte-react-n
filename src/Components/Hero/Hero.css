@@ -1,0 +1,342 @@
+/* ===== BASE STYLES ===== */
+.HeroMain {
+    height: 70svh;
+    overflow: hidden;
+    background: url(../../assets/HeroBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.HeroSub {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+}
+
+/* ===== HERO TEXT ===== */
+.hero_text {
+    width:100%;
+    position: relative;
+    z-index: 2;
+}
+.hero_text img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.hero_text h1 {
+    font-size: 5svw;
+    font-weight: 900;
+    color: #fff;
+    line-height: 70px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.hero_text h2 {
+    font-size: 3svw;
+    font-weight: 600;
+    color: #ffbd2f;
+    text-transform: uppercase;
+    line-height: 50px;
+}
+
+.hero_text h3 {
+    font-size: 4.1svw;
+    font-weight: 800;
+    color: #ff8d2f;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin-top: 10px;
+}
+
+.hero_text h4 {
+    font-size: 3.8svw;
+    font-weight: 400;
+    color: #a1ff2f;
+    margin-bottom: -30px;
+}
+
+/* ===== HERO IMAGE ===== */
+.hero_img {
+    width: 50%;
+    position: relative;
+}
+
+.hero_img img {
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero_img img:nth-child(2) {
+    left: 78%;
+    transform: translate(-50%, 250%);
+    z-index: 4;
+}
+
+.hero_img img:nth-child(3) {
+    left: 2%;
+    transform: translate(-50%, -20%);
+    z-index: 4;
+}
+
+.hero_img img:nth-child(4) {
+    left: 94%;
+    transform: translate(-50%, -77%);
+    z-index: 4;
+}
+
+.hero_img .biriyani {
+    width: 100%;
+    max-width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+/* ===== DECORATIVE ELEMENTS ===== */
+.LeftCloud {
+    position: absolute;
+    left: -870px;
+    top: 50%;
+    transform: translateY(-60%);
+    z-index: 0;
+    opacity: 0.6;
+}
+
+.RightCloud {
+    position: absolute;
+    right: -1270px;
+    top: 50%;
+    transform: translateY(-24%);
+    z-index: 0;
+    opacity: 0.7;
+}
+.HomeBannerBTN{
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+.HomeBannerBTN1 {
+  position: relative;
+  padding: 14px 34px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--primary_400) 0%, var(--primary_100));
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 20px rgba(232, 121, 109, 0.25);
+}
+
+/* Hover effect */
+.HomeBannerBTN1:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 16px 40px rgba(232, 111, 109, 0.4);
+}
+
+/* Click (press) effect */
+.HomeBannerBTN1:active {
+  transform: scale(0.95);
+  box-shadow: 0 6px 15px rgba(232, 109, 109, 0.2);
+}
+
+/* Shine effect */
+.HomeBannerBTN1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transition: all 0.6s ease;
+}
+
+.HomeBannerBTN1:hover::before {
+  left: 100%;
+}
+.HomeBannerBTN2 {
+  position: relative;
+  padding: 14px 34px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary_400);
+  background: transparent;
+  border: 2px solid var(--primary_100);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+/* Hover fill animation */
+.HomeBannerBTN2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--primary_100);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.HomeBannerBTN2:hover::before {
+  transform: scaleX(1);
+}
+
+/* Text color change */
+.HomeBannerBTN2:hover {
+  color: var(--text_100);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(232, 184, 109, 0.25);
+}
+
+/* Click effect */
+.HomeBannerBTN2:active {
+  transform: scale(0.95);
+}
+
+/* Pulse ring effect */
+.HomeBannerBTN2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  border: 2px solid #e8b86d;
+  opacity: 0;
+}
+
+.HomeBannerBTN2:hover::after {
+  animation: pulseRing 0.6s ease-out;
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+.HeroSub img{
+    width: 100%;
+    max-width: 350px;
+    position: absolute;
+    right: 0;
+    top: 60%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+@media screen and (max-width:1399px) {
+  .hero_text h2 {
+    font-size: 4svw;
+  }
+  .hero_text h1 {
+    font-size: 6svw;
+  }
+}
+@media screen and (max-width:999px) {
+  .hero_text h2 {
+    font-size: 35px;
+    line-height: 35px;
+  }
+  .hero_text h1 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .hero_text h4 {
+    font-family: Dancing Script, cursive;
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: -13px;   
+  }
+  .hero_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .HeroMain{
+    align-items: start;
+    padding-top: 90px;
+  }
+  .HeroSub img{
+        max-width: unset;
+        max-height: 40svh;
+        width: unset;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        right: unset;
+        top: unset;
+  }
+  .HeroSub{
+    flex-direction: column;
+    position: unset;
+  }
+  .HeroMain{
+    height: 80svh;
+    position: relative;
+  } 
+  .HomeBannerBTN{
+    margin-top: 15px;
+  }
+  .HomeBannerBTN2 , .HomeBannerBTN1{
+    padding: 6px 25px;
+    font-size: 13px;
+  }
+}
+@media screen and (max-height:860px){
+  .HeroSub img{
+    max-width: 290px;
+    right: 50px;
+  }
+}
+@media screen and (max-height:730px){
+  .HeroSub img{
+    max-width: 250px;
+  }
+}
+@media screen and (max-height:650px){
+  .HeroSub img{
+    max-width: 230px;
+  }
+}
+@media screen and (max-width:470px){
+      .hero_text h1 {
+        font-size: 35px;
+        line-height: 35px;
+    }
+        .hero_text h4 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+        .hero_text h2 {
+        font-size: 27px;
+        line-height: 27px;
+    }
+    .HeroSub img{
+      max-height: 38svh;
+    }
+}

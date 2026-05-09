@@ -1,0 +1,37 @@
+.PNR_Search_wrpr{
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 10px;
+    border: var(--primary_100) solid 1px;
+    margin-top: 20px;
+}
+.PNR_Search {
+    display: grid !important;
+    grid-template-columns: 1.2fr 2.5fr 1fr !important;
+    gap: 20px !important;
+}
+.PNR_Search_wrpr .CommonBTN{
+    border-radius: 5px;
+}
+.Search_wrpr .CommonHeader{
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+}
+.Search_wrpr{
+    margin: 50px 0;
+}
+.irctc {
+    color: #302d7d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 18px;
+    width: fit-content;
+    gap: 20px;
+    margin: 0 auto;
+}
+.irctc img{
+    width: 40px;
+}
