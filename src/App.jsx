@@ -6,6 +6,7 @@ import GroupOrder from "./Pages/GroupOrder/GroupOrder"
 import Contact from "./Pages/Contact/Contact"
 import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
 import { outlinedInputClasses } from '@mui/material/OutlinedInput';
+import Offer from "./Pages/Offer/Offer";
 
 
   const customTheme = (outerTheme) =>
@@ -86,6 +87,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/group-order" element={<GroupOrder />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/offer" element={<Offer />} />
         </Route>
 
       </Routes>
