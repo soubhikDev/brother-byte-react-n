@@ -1,26 +1,11 @@
 import React from 'react'
 import './Discount.css'
 import DiscountImg from '../../assets/DiscountImg.png'
+import CouponCard from '../../Components/CouponCard/CouponCard'
 import { Button, TextField } from '@mui/material'
 
 export default function Discount() {
-    const Coupon = [
-        {
-            name: 'FIRSTBITE',
-            discount: '200',
-            orderAmount: '2999'
-        },
-        {
-            name: 'BRO5',
-            discount: '400',
-            orderAmount: '3999'
-        },
-        {
-            name: 'BRO10',
-            discount: '500',
-            orderAmount: '4999'
-        },
-    ]
+
   return (
     <>
         <div className="DiscountMain">
@@ -32,7 +17,7 @@ export default function Discount() {
                     <Button variant="contained">Submit</Button>
                 </div> */}
                 <div className="coponesWrpr">
-                    {Coupon.map((item, index) => (
+                    {/* {Coupon.map((item, index) => (
                         <div key={index} className="couponsMapWrpr">
                             <h1>OFF</h1>
                             <div className="couponsSubWrpr">
@@ -41,7 +26,31 @@ export default function Discount() {
                                 <h4>on order above {item.orderAmount}</h4>
                             </div>
                         </div>
-                    ))}
+                    ))} */}
+                    <CouponCard
+                        offerLabel="OFFER VOUCHER"
+                        discountValue="5%"
+                        discountUnit="OFF"
+                        description="Get Flat 5% Discount of Every Prepaid Order."
+                        voucherCode="PREPAID5"
+                        minOrder="₹1"
+                    />
+                    <CouponCard
+                        offerLabel="OFFER VOUCHER"
+                        discountValue="5%"
+                        discountUnit="OFF"
+                        description="Get Flat 5% Discount of Every Prepaid Order."
+                        voucherCode="PREPAID5"
+                        minOrder="₹1"
+                    />
+                    <CouponCard
+                        offerLabel="OFFER VOUCHER"
+                        discountValue="5%"
+                        discountUnit="OFF"
+                        description="Get Flat 5% Discount of Every Prepaid Order."
+                        voucherCode="PREPAID5"
+                        minOrder="₹1"
+                    />
                 </div>
             </div>
         </div>
