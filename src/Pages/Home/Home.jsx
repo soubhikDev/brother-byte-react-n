@@ -21,7 +21,7 @@ import RestaurantOwner from '../../Components/RestaurantOwner/RestaurantOwner'
 import HomeDocument from '../../Components/HomeDocument/HomeDocument'
 import FAQ from '../../Components/FAQ/FAQ'
 import BlogCard from '../../Components/BlogCard/BlogCard'
-import GroupOrderImg from '../../assets/GroupOrderImg.jpg'
+import { BlogData } from '../../../BlogData.js'
 
 export default function Home() {
   const brand = [
@@ -44,7 +44,7 @@ export default function Home() {
       img: teaTimeBrand,
     },
   ]
-        const faqData = [
+  const faqData = [
     {
       id: 1,
       question: "How to book a group food order in a train online?",
@@ -217,30 +217,15 @@ export default function Home() {
           <div className="blogWrprHomeMain">
             <h1 className="CommonHeader">Brother Byte <span>Blogs</span></h1>
             <div className="blogWrprHome">
-              <BlogCard 
-                image={GroupOrderImg}
-                title="What Are Healthy Food Options You Can Order in Train?"
-                content="The summer rush is coming and Indian Railways is ready to welcome every traveller on board..."
-                link="/blog/healthy-food-options"
-              />
-              <BlogCard 
-                image={GroupOrderImg}
-                title="What Are Healthy Food Options You Can Order in Train?"
-                content="The summer rush is coming and Indian Railways is ready to welcome every traveller on board..."
-                link="/blog/healthy-food-options"
-              />
-              <BlogCard 
-                image={GroupOrderImg}
-                title="What Are Healthy Food Options You Can Order in Train?"
-                content="The summer rush is coming and Indian Railways is ready to welcome every traveller on board..."
-                link="/blog/healthy-food-options"
-              />
-              <BlogCard 
-                image={GroupOrderImg}
-                title="What Are Healthy Food Options You Can Order in Train?"
-                content="The summer rush is coming and Indian Railways is ready to welcome every traveller on board..."
-                link="/blog/healthy-food-options"
-              />
+              {BlogData.slice(0, 4).map((blog) => (
+                <BlogCard 
+                  key={blog.id}
+                  image={blog.image}
+                  title={blog.title}
+                  content={blog.content}
+                  link={`/blog/${blog.slug}`}
+                />
+              ))}
             </div>
           </div>
           </div>

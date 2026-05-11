@@ -12,7 +12,7 @@ export default function PageHero({PageHeroData}) {
         <div className="PageHeroMain">
             <div className="common_width PageHeroSub">
                 <h1>{PageHeroData.title}</h1>
-                <img className='mainImgPH' src={PageHeroData.img} alt={PageHeroData.title} />
+                {/* <img className='mainImgPH' src={PageHeroData.img} alt={PageHeroData.title} /> */}
                 
             </div>
             <img src={GreenChilli2} alt={GreenChilli2} />

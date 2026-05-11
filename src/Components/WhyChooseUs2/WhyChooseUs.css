@@ -1,0 +1,352 @@
+/* ─── Why Choose Us ─────────────────────────────────────────────── */
+
+.WhyChooseUs {
+  width: 100%;
+  padding: 100px 20px;
+  background: var(--primary_100);
+  position: relative;
+  overflow: hidden;
+}
+
+/* decorative bg shapes */
+.WhyChooseUs::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  top: -220px;
+  right: -180px;
+  background: rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+}
+
+.WhyChooseUs::after {
+  content: '';
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  bottom: -140px;
+  left: -100px;
+  background: rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+}
+
+/* inner ring decoration */
+.WhyChooseUs_ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+.WhyChooseUs_ring:nth-child(1) {
+  width: 280px; height: 280px;
+  top: -60px; left: 60px;
+}
+.WhyChooseUs_ring:nth-child(2) {
+  width: 180px; height: 180px;
+  bottom: 20px; right: 80px;
+}
+
+.WhyChooseUs_inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+/* ─── Left: Heading block ───────────────────────────────────────── */
+
+.WhyChooseUs_left {
+  max-width: 340px;
+}
+
+.WhyChooseUs_left .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 5px 13px;
+  border-radius: 100px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.WhyChooseUs_left .tag::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.WhyChooseUs_left h2 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 2.6vw, 2.8rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.WhyChooseUs_left h2 span {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.WhyChooseUs_left p {
+  margin: 0 0 32px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.WhyChooseUs_cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: var(--primary_100);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: 100px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+
+.WhyChooseUs_cta:hover {
+  background: var(--primary_500);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+.WhyChooseUs_cta .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.WhyChooseUs_cta:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* ─── Right: Cards Grid ─────────────────────────────────────────── */
+
+.WhyChooseUs_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ─── Individual Card ───────────────────────────────────────────── */
+
+.WhyChooseUs_card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  backdrop-filter: blur(4px);
+  transition: background 0.35s ease,
+              border-color 0.35s ease,
+              transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s ease;
+  cursor: default;
+  /* staggered reveal */
+  opacity: 0;
+  animation: wcu_fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.WhyChooseUs_card:nth-child(1) { animation-delay: 0.1s; }
+.WhyChooseUs_card:nth-child(2) { animation-delay: 0.22s; }
+.WhyChooseUs_card:nth-child(3) { animation-delay: 0.34s; }
+
+@keyframes wcu_fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.WhyChooseUs_card:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.38);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.18);
+}
+
+/* featured / highlighted card */
+.WhyChooseUs_card.featured {
+  background: #fff;
+  border-color: transparent;
+}
+
+.WhyChooseUs_card.featured:hover {
+  background: #fff;
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 24px 52px rgba(0, 0, 0, 0.2);
+}
+
+/* ─── Card top row ──────────────────────────────────────────────── */
+
+.WhyChooseUs_cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.WhyChooseUs_cardNum {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+.WhyChooseUs_card.featured .WhyChooseUs_cardNum {
+  color: var(--primary_300);
+}
+.WhyChooseUs_card:hover .WhyChooseUs_cardNum {
+  color: rgba(255, 255, 255, 0.8);
+}
+.WhyChooseUs_card.featured:hover .WhyChooseUs_cardNum {
+  color: var(--primary_200);
+}
+
+.WhyChooseUs_cardArrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  display: grid;
+  place-items: center;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  transition: border-color 0.3s, color 0.3s, transform 0.3s;
+}
+.WhyChooseUs_card.featured .WhyChooseUs_cardArrow {
+  border-color: var(--bg_200);
+  color: var(--text_300);
+}
+.WhyChooseUs_card:hover .WhyChooseUs_cardArrow {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+  transform: translateX(3px);
+}
+.WhyChooseUs_card.featured:hover .WhyChooseUs_cardArrow {
+  border-color: var(--primary_300);
+  color: var(--primary_100);
+}
+
+/* ─── Icon circle ───────────────────────────────────────────────── */
+
+.WhyChooseUs_icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  display: grid;
+  place-items: center;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.WhyChooseUs_icon span {
+  font-size: 1.7rem;
+  display: block;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.WhyChooseUs_card:hover .WhyChooseUs_icon span {
+  transform: scale(1.15) rotate(-4deg);
+}
+
+.WhyChooseUs_card.featured .WhyChooseUs_icon {
+  background: var(--primary_500);
+  border-color: var(--primary_300);
+}
+
+/* ─── Card text ─────────────────────────────────────────────────── */
+
+.WhyChooseUs_cardText {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.WhyChooseUs_cardText h3 {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+  transition: color 0.3s;
+}
+
+.WhyChooseUs_cardText p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.75;
+  transition: color 0.3s;
+}
+
+.WhyChooseUs_card.featured .WhyChooseUs_cardText h3 {
+  color: var(--text_100);
+}
+.WhyChooseUs_card.featured .WhyChooseUs_cardText p {
+  color: var(--text_200);
+}
+
+/* ─── Responsive ────────────────────────────────────────────────── */
+
+@media (max-width: 1100px) {
+  .WhyChooseUs_inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .WhyChooseUs_left {
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .WhyChooseUs_cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+
+@media (max-width: 540px) {
+  .WhyChooseUs {
+    padding: 64px 16px;
+  }
+  .WhyChooseUs_cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .WhyChooseUs_card {
+    padding: 22px 18px;
+  }
+  .WhyChooseUs_card:hover {
+    transform: translateY(-4px);
+  }
+}

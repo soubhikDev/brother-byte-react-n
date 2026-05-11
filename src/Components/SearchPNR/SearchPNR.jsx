@@ -6,14 +6,27 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { TextField } from '@mui/material';
+import { useNavigate } from 'react-router-dom'
 import IRCTC_LOGO from '../../assets/IRCTC_LOGO.png'
 
 export default function SearchPNR() {
     const [pnr, setPnr] = React.useState('PNR');
+    const [searchValue, setSearchValue] = React.useState('')
+    const navigate = useNavigate()
 
     const handleChange = (event) => {
         setPnr(event.target.value);
     };
+
+    const handleSearchChange = (event) => {
+      setSearchValue(event.target.value)
+    }
+
+    const handleOrderNow = () => {
+      const trimmedValue = searchValue.trim()
+      if (!trimmedValue) return
+      navigate(`/restaurant-pnr?type=${encodeURIComponent(pnr)}&value=${encodeURIComponent(trimmedValue)}`)
+    }
 
   return (
     <>
@@ -34,8 +47,14 @@ export default function SearchPNR() {
                         <MenuItem value="Station">Station</MenuItem>
                     </Select>
 
-                    <TextField id="outlined-basic" label={`Enter ${pnr} ${pnr === 'Station'? 'Code' : 'Number'}`} variant="outlined" />
-                    <button className='CommonBTN'>Order Now</button>
+                    <TextField
+                      id="outlined-basic"
+                      label={`Enter ${pnr} ${pnr === 'Station' ? 'Code' : 'Number'}`}
+                      variant="outlined"
+                      value={searchValue}
+                      onChange={handleSearchChange}
+                    />
+                    <button type="button" className='CommonBTN' onClick={handleOrderNow}>Order Now</button>
                 </FormControl>
             </Box>
             <h2 className="irctc"><span>Most Trusted Partner Of IRCTC</span> <img src={IRCTC_LOGO} /></h2>

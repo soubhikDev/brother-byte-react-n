@@ -9,6 +9,9 @@ import { outlinedInputClasses } from '@mui/material/OutlinedInput';
 import Offer from "./Pages/Offer/Offer";
 import Blog from "./Pages/Blog/Blog";
 import BlogDetail from "./Pages/Blog/BlogDetail";
+import Partner from "./Pages/Partner/Partner";
+import RestaurantPnr from "./Pages/RestaurantPnr/RestaurantPnr";
+import StationMenu from "./Pages/StationMenu/StationMenu";
 
 
   const customTheme = (outerTheme) =>
@@ -92,6 +95,9 @@ function App() {
           <Route path="/offer" element={<Offer />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogDetail />} />
+          <Route path="/restaurant-pnr" element={<RestaurantPnr />} />
+          <Route path="/station-menu/:restaurant" element={<StationMenu />} />
+          <Route path="/partner" element={<Partner />} />
         </Route>
 
       </Routes>

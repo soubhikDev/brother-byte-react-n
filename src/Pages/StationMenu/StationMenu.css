@@ -1,0 +1,80 @@
+.StationMenu_wrpr {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background: var(--bg_100);
+}
+
+.StationMenu_card {
+  width: min(900px, 100%);
+  background: #fff;
+  border-radius: 24px;
+  border: 1px solid var(--bg_200);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+}
+
+.StationMenu_header {
+  margin-bottom: 1.5rem;
+}
+
+.StationMenu_header h1 {
+  font-size: clamp(2rem, 2.5vw, 2.6rem);
+  margin: 0 0 0.75rem;
+  color: var(--text_100);
+}
+
+.StationMenu_subtitle {
+  margin: 0;
+  color: var(--text_200);
+  line-height: 1.6;
+  max-width: 36rem;
+}
+
+.StationMenu_content {
+  padding: 1.75rem;
+  border-radius: 18px;
+  background: var(--bg_200);
+  margin-bottom: 1.75rem;
+}
+
+.StationMenu_info {
+  color: var(--text_200);
+  font-size: 0.98rem;
+}
+
+.StationMenu_back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  background: var(--primary_100);
+  color: #fff;
+  padding: 0.95rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform var(--transition), background var(--transition);
+}
+
+.StationMenu_back:hover {
+  transform: translateY(-1px);
+  background: #c21928;
+}
+
+.StationMenu_back svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 720px) {
+  .StationMenu_card {
+    padding: 1.5rem;
+  }
+
+  .StationMenu_content {
+    padding: 1.3rem;
+  }
+}

@@ -4,11 +4,33 @@
   background: linear-gradient(135deg, var(--bg_100) 0%, var(--primary_500) 100%);
   min-height: 100vh;
 }
-
+.BlogDetail_wrprSub{
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: start;
+}
+.BlogDetail_content_right{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.BlogDetail_contentImage_ad{
+  border-radius: 15px;
+  overflow: hidden;
+}
+.FF_Online{
+  padding: 15px;
+  background: var(--bg_100);
+  border-radius: 10px;
+  border: var(--primary_100) solid 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .BlogDetail_content {
-  width: 100%;
-  max-width: 850px;
-  margin: 0 auto 80px;
+  width:calc(100% - 300px);
   animation: fadeInUp 0.8s ease-out;
 }
 

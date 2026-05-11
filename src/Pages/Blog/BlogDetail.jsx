@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import PageHero from '../../Components/PageHeros/PageHero'
 import ContactHero from '../../assets/ContactHero.png'
 import { BlogData } from '../../../BlogData'
 import './BlogDetail.css'
+import { TextField } from '@mui/material'
+import BlogAds from '../../assets/BlogAds.png'
+import BlogBanner from '../../assets/BlogBanner.png'
+
 
 export default function BlogDetail() {
   const { slug } = useParams()
   const navigate = useNavigate()
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   const blog = BlogData.find(b => b.slug === slug)
 
@@ -26,8 +34,11 @@ export default function BlogDetail() {
 
   return (
     <>
-      <PageHero PageHeroData={{title: blog.title, img: ContactHero}} />
+      <div className="Blog_banner">
+        <img src={BlogBanner} alt="BlogBanner" />
+      </div>
       <div className="BlogDetail_wrpr">
+        <div className="BlogDetail_wrprSub common_width">
         <article className="BlogDetail_content">
           <div className="BlogDetail_image_container">
             <img src={blog.image} alt={blog.title} className="BlogDetail_image" />
@@ -54,6 +65,20 @@ export default function BlogDetail() {
             </button>
           </div>
         </article>
+        <div className="BlogDetail_content_right">
+          <article className="FF_Online">
+            <TextField id="outlined-basic" label="Name" variant="outlined" />
+            <TextField id="outlined-basic" label="Email" variant="outlined" />
+            <TextField id="outlined-basic" label="Contact" variant="outlined" />
+            <TextField id="outlined-basic" label="No Of Guest" variant="outlined" />
+            <TextField id="outlined-basic" label="Additional Details" multiline rows={4} variant="outlined" />
+            <button className="CommonBTN">Send Enquiry</button>
+          </article>
+          <div className="BlogDetail_contentImage_ad">
+            <img src={BlogAds} alt="BlogAds" />
+          </div>
+        </div>
+        </div>
 
         {relatedBlogs.length > 0 && (
           <div className="BlogDetail_related">

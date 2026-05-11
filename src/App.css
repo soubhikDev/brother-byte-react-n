@@ -111,7 +111,7 @@ h6 {
   
   --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --transition_smooth: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  --transition_standard: all 0.3s ease-in-out;
+  --transition_standard: ease-in-out;
   --shadow_soft: 0 4px 15px rgba(17, 112, 179, 0.08);
   --shadow_medium: 0 8px 30px rgba(17, 112, 179, 0.12);
   --shadow_hover: 0 12px 40px rgba(17, 112, 179, 0.15);

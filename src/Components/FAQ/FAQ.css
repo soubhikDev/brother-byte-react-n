@@ -3,7 +3,7 @@
    ============================================ */
 .faq-wrapper {
   background: linear-gradient(135deg, #fff -50%,  var(--primary_500) 160%);
-  min-height: 100vh;
+  
   padding: 40px 20px;
   padding-bottom: 90px;
   position: relative;
