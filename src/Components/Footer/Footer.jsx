@@ -214,14 +214,88 @@ export default function Footer() {
         menu: 'Order History',
         path: '/order-history'
       },
+      {
+        menu: 'About Us',
+        path: '/about-us'
+      },
     ]
 
-    const visitLists = [
+    const quickLinks = [
       {
-        menu: 'Gift Vouchers',
-        path: '/gift-vouchers'
+        menu: 'Our Blog',
+        path: '/blog'
       },
-
+      {
+        menu: 'Feedback',
+        path: '/feedback'
+      },
+      {
+        menu: 'Track Order',
+        path: '/track-order'
+      },
+      {
+        menu: 'Partner',
+        path: '/partner'
+      },
+      {
+        menu: 'Need Help',
+        path: '/need-help'
+      },
+      {
+        menu: 'FAQs',
+        path: '/faqs'
+      },
+      {
+        menu: 'Sitemap',
+        path: '/sitemap'
+      },
+      {
+        menu: 'Locations',
+        path: '/locations'
+      },
+      
+    ]
+    const ourservices = [
+      {
+        menu: 'Jain Food Delivery',
+        path: '/jain-food-delivery'
+      },
+      {
+        menu: 'Food Order on Whatsapp',
+        path: '/food-order-whatsapp'
+      },
+      {
+        menu: 'Celebration With Brother Byte',
+        path: '/celebration'
+      },
+      {
+        menu: 'Festival With Brother Byte',
+        path: '/festival'
+      },
+      {
+        menu: 'PNR Status Check',
+        path: '/pnr-status-check'
+      },
+      {
+        menu: 'Train Coach Position',
+        path: '/train-coach-position'
+      },
+      {
+        menu: 'IRCTC Train Schedule',
+        path: '/irctc-train-schedule'
+      },
+      {
+        menu: 'Platform Locator',
+        path: '/platform-locator'
+      },
+      {
+        menu: 'Check PNR Status on Whatsapp',
+        path: '/check-pnr-status-on-whatsapp'
+      },
+      {
+        menu: 'IRCTC Food Order on WhatsApp',
+        path: '/irctc-food-order-on-whatsapp'
+      }
     ]
 
 
@@ -286,6 +360,28 @@ const handleSubmit = () => {
               </li>
             ))}
           </ul>
+          <h3 className="col-title MT20">Quick Links</h3>
+          <ul className="col-links">
+            {quickLinks.map((item, index) => (
+              <li key={index}>
+                <NavLink to={item.path}>
+                  <span className="link-arrow">›</span>
+                  {item.menu}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+          <h3 className="col-title MT20">Our Services</h3>
+          <ul className="col-links">
+            {ourservices.map((item, index) => (
+              <li key={index}>
+                <NavLink to={item.path}>
+                  <span className="link-arrow">›</span>
+                  {item.menu}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Visit */}
@@ -342,7 +438,7 @@ const handleSubmit = () => {
           © 2026 <NavLink to="/">BrotherBytes</NavLink>. All rights reserved.
         </p>
         <ul className="footer-legal">
-          {[{name:'Privacy Policy', link: '/privacy-policy'}, {name:'Terms & Conditions', link: '/terms-and-conditions'}].map((item, index) => (
+          {[{name:'Privacy Policy', link: '/privacy-policy'}, {name:'Terms & Conditions', link: '/terms-conditions'}].map((item, index) => (
             <li key={index}>
               <NavLink to={item.link}>{item.name}</NavLink>
           

@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-body);
+
   color: var(--text_300);
   font-size: 0.9rem;
   letter-spacing: 0.1em;
@@ -70,7 +70,7 @@
   align-items: center;
   gap: 1.2rem;
   padding: 0 2rem;
-  font-family: var(--font-display);
+  
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -106,7 +106,7 @@
 }
 
 .cta-headline {
-  font-family: var(--font-display);
+  
   font-size: clamp(2.6rem, 5vw, 5rem);
   font-weight: 900;
   line-height: 1.0;
@@ -139,7 +139,7 @@
 }
 
 .cta-btn {
-  font-family: var(--font-body);
+
   font-size: 0.88rem;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -236,7 +236,7 @@
 }
 
 /* Nav columns */
-.footer-col {}
+
 
 .col-title {
   font-size: 0.7rem;
@@ -261,6 +261,7 @@
   list-style: none;
   display: flex;
   gap: 0.8rem;
+  flex-wrap: wrap;
 }
 
 .col-links li a {
@@ -531,13 +532,11 @@
 }
 @media screen and (max-width: 899px) {
       .footer-grid {
-        grid-template-columns: 1fr 0.7fr;
+        grid-template-columns: 1fr;
     }
 }
 @media (max-width: 768px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
+
   .footer-cta-strip {
     flex-direction: column;
     align-items: flex-start;

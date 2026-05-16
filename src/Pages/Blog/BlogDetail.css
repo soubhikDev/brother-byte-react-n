@@ -51,7 +51,7 @@
   margin-bottom: 40px;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 16px 50px rgba(226, 6, 19, 0.15);
+  box-shadow: 0 24px 12px -18px rgb(0 0 0 / 49%);
   transition: var(--transition);
 }
 
@@ -233,7 +233,20 @@
   margin-bottom: 30px;
   font-weight: 800;
 }
-
+@media screen and (max-width: 999px) {
+  .BlogDetail_wrprSub {
+    flex-direction: column;
+  }
+  .BlogDetail_content {
+    width: 100%;
+  }
+  .BlogDetail_content_right {
+    width: 100%;
+  }
+  .BlogDetail_image_container{
+    margin-bottom: 20px;
+  }
+}
 /* Tablet Devices */
 @media (max-width: 768px) {
   .BlogDetail_wrpr {

@@ -111,11 +111,11 @@ const HomeDocument = () => {
 
         <div className="SectionHeader">
           <span className="SectionTag">IRCTC e-Catering Partner</span>
-          <h1 className="SectionTitle">
+          <h1 className="CommonHeader">
             Order Food in Trains Online{' '}
-            <span className="TitleHighlight">From IRCTC Trusted Partner</span>
+            <span>From IRCTC Trusted Partner</span>
           </h1>
-          <p className="SectionSubtitle">
+          <p className="CommonPera">
             Fresh, hygienic meals delivered to your seat across 4000+ trains in India
           </p>
         </div>

@@ -61,9 +61,9 @@ export default function PartnerEnquiry() {
 
         {/* Header */}
         <div className="PartnerEnquiry_header">
-          <div className="tag">Get In Touch</div>
-          <h2>
-            Partner Enquiry <span>RajBhog Khana</span>
+          <div className="CommonEyebrow">Get In Touch</div>
+          <h2 className="CommonHeader">
+            Partner Enquiry <span>Brother Byte</span>
           </h2>
           <p>Please leave your contact details and we'll reach you within 24 hours.</p>
         </div>

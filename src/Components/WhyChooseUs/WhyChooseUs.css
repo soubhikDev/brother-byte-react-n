@@ -38,12 +38,6 @@
   background: linear-gradient(90deg, var(--primary_100), var(--secondary_100));
 }
 
-.WhyChooseUsHeader .CommonHeader {
-  font-size: clamp(2rem, 2.6vw, 3rem);
-  color: var(--text_100);
-  line-height: 1.1;
-  margin: 0 auto 18px;
-}
 
 .WhyChooseUsSubtext {
   font-size: 1rem;

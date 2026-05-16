@@ -20,7 +20,7 @@ const NAV_LINKS = [
     { label: "Offer", href: "/offer" },
     { label: "Group Order", href: "/group-order" },
     { label: "Contact Us", href: "/contact" },
-    { label: "Order History", href: "/about" },
+    { label: "Order History", href: "/order-history" },
 ];
 
 export default function Navbar() {

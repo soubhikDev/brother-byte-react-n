@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import RestaurantCard from '../../Components/RestaurantCard/RestaurantCard'
 import './RestaurantPnr.css'
+import Discount from '../../Components/Discount/Discount'
 
 /* ── Inline SVG Icons ── */
 const IconTrain = () => (
@@ -49,13 +50,6 @@ const IconSearch = () => (
     strokeLinecap="round" strokeLinejoin="round">
     <circle cx="11" cy="11" r="8"/>
     <path d="m21 21-4.35-4.35"/>
-  </svg>
-)
-
-const IconUtensils = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
-    strokeLinecap="round" strokeLinejoin="round">
-    <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/>
   </svg>
 )
 
@@ -244,11 +238,14 @@ export default function RestaurantPnr() {
 
   const [selectedStation, setSelectedStation] = useState('')
   const [carouselIndex, setCarouselIndex] = useState(0)
+  const [visibleCards, setVisibleCards] = useState(4)
   const groupRefs = useRef([])
-  const visibleCards = 4
-  const maxCarouselIndex = Math.max(0, totalStations - visibleCards)
   const carouselGap = 18
   const autoplayInterval = 3500
+
+  const maxCarouselIndex = Math.max(0, totalStations - visibleCards)
+  const cardWidth = `calc((100% - ${(visibleCards - 1) * carouselGap}px) / ${visibleCards})`
+  const step = `calc(${cardWidth} + ${carouselGap}px)`
 
   const displayedData = selectedStation
     ? RestaurantData.filter((item) => item.station === selectedStation)
@@ -263,6 +260,23 @@ export default function RestaurantPnr() {
     }, {}),
     []
   )
+
+  useEffect(() => {
+    const updateVisibleCards = () => {
+      const width = window.innerWidth
+      if (width <= 480) setVisibleCards(1)
+      else if (width <= 768) setVisibleCards(2)
+      else if (width <= 1199) setVisibleCards(3)
+      else setVisibleCards(4)
+    }
+    updateVisibleCards()
+    window.addEventListener('resize', updateVisibleCards)
+    return () => window.removeEventListener('resize', updateVisibleCards)
+  }, [])
+
+  useEffect(() => {
+    setCarouselIndex((prev) => Math.min(prev, maxCarouselIndex)) // eslint-disable-line react-hooks/set-state-in-effect
+  }, [maxCarouselIndex])
 
   useEffect(() => {
     if (!selectedStation) return
@@ -284,7 +298,7 @@ export default function RestaurantPnr() {
     }, autoplayInterval)
 
     return () => clearInterval(interval)
-  }, [selectedStation, maxCarouselIndex, autoplayInterval])
+  }, [selectedStation, maxCarouselIndex, autoplayInterval, visibleCards])
 
   const scrollToStation = (station, index) => {
     setSelectedStation(station)
@@ -340,6 +354,7 @@ export default function RestaurantPnr() {
       <div className="RestaurantPnr_content">
         {searchValue && (
           <div className="common_width station_carousel_wrap">
+            <h1 className="CommonHeader">ORDER FOOD IN - <span>RAJDHANI EXP (12951)</span></h1>
             <div className="station_carousel_header">
               <div>
                 <h2>Stations on your route</h2>
@@ -377,7 +392,7 @@ export default function RestaurantPnr() {
             </div>
 
             <div className="station_carousel_view" >
-              <div className="station_carousel_track" style={{ transform: `translateX(calc(-${carouselIndex} * ((100% - 54px) / 4 + 18px)))`,}}>
+              <div className="station_carousel_track" style={{ transform: `translateX(calc(-${carouselIndex} * ${step}))`,}}>
                 {RestaurantData.map((item, index) => {
                   const [eta, sta, halt] = item.stopeg.split('|').map((part) => part.trim())
                   return (
@@ -386,6 +401,7 @@ export default function RestaurantPnr() {
                       type="button"
                       className={`station_card${selectedStation === item.station ? ' active' : ''}`}
                       onClick={() => scrollToStation(item.station, index)}
+                      style={{ minWidth: cardWidth, maxWidth: cardWidth }}
                     >
                       <div
                         className="station_card_image"
@@ -411,10 +427,14 @@ export default function RestaurantPnr() {
           </div>
         )}
 
+        <div className="common_width">
+          <Discount/>
+        </div>
+
         <div className="common_width RestaurantPnr_content_inner">
 
           {searchValue ? (
-            displayedData.map((item, index) => (
+            displayedData.map((item) => (
               <div
                 key={item.station}
                 ref={(el) => {

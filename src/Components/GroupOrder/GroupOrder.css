@@ -5,7 +5,7 @@
     margin-top: 100px;
     margin-bottom: 100px;
     width: 100%;
-    padding: 40px 30px;
+    padding: 40px;
     background: linear-gradient(135deg, var(--warm-white) 0%, var(--cream) 100%);
     border-radius: 15px;
     gap: 40px;
@@ -28,18 +28,8 @@
     gap: 20px;
     justify-content: center;
 }
-
-.GroupOrder_TextSection h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: var(--text_100);
-    line-height: 1.3;
-    margin: 0;
-}
-
-.GroupOrder_TextSection h1 span {
-    color: var(--primary_100);
-    display: inline;
+.GroupOrder_Content .CommonHeader {
+    text-align: left;
 }
 
 .GroupOrder_Description {
@@ -67,18 +57,18 @@
 
 .GroupOrder_ImageSection {
     flex: 1;
-    min-width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    height: stretch;
 }
 
 .GroupOrder_ImageSection img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
     transition: var(--transition_smooth);
 }
 
@@ -131,13 +121,19 @@
     }
 
     .GroupOrder_ImageSection img {
-        max-width: 350px;
+        max-height: 300px;
+    }
+    .GroupOrderMain .CommonPera{
+        margin-top: 0;
+    }
+    .GroupOrder_Content{
+        gap: 10px;
     }
 }
 
 @media (max-width: 480px) {
     .GroupOrderMain {
-        padding: 20px 12px;
+        padding: 20px;
         gap: 15px;
         margin-top: 40px;
         margin-bottom: 40px;
@@ -158,7 +154,4 @@
         font-size: 0.9rem;
     }
 
-    .GroupOrder_ImageSection img {
-        max-width: 250px;
-    }
 }

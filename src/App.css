@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 * {
     margin: 0;
@@ -20,7 +20,7 @@ html {
 }
 
 body {
-    font-family: "Poppins", sans-serif !important;
+    font-family: "Roboto", sans-serif !important;
     -ms-overflow-style: none;
 }
 
@@ -112,9 +112,9 @@ h6 {
   --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --transition_smooth: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   --transition_standard: ease-in-out;
-  --shadow_soft: 0 4px 15px rgba(17, 112, 179, 0.08);
+  --shadow_soft: 0 4px 15px rgba(0, 0, 0, 0.08);
   --shadow_medium: 0 8px 30px rgba(17, 112, 179, 0.12);
-  --shadow_hover: 0 12px 40px rgba(17, 112, 179, 0.15);
+  --shadow_hover: 0 12px 40px rgba(0, 0, 0, 0.15);
 
   --nav-height: 72px;
   --nav-height-scrolled: 60px;
@@ -262,5 +262,22 @@ input:-webkit-autofill {
     line-height: 1.7;
     text-align: center;
 }
-
+.CommonEyebrow {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #e20613;
+    background: rgba(226, 6, 19, 0.08);
+    border: 1px solid rgba(226, 6, 19, 0.18);
+    border-radius: 100px;
+    padding: 5px 16px;
+}
+.TL {
+    text-align: left;
+}
+.MT20 {
+    margin-top: 20px;
+}
 

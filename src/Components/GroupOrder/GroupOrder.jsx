@@ -9,8 +9,8 @@ export default function GroupOrder() {
     <div className="GroupOrderMain">
       <div className="GroupOrder_TextSection">
         <div className="GroupOrder_Content">
-          <h1>Order Bulk Food for <span>Group in Train</span> with Brother Byte</h1>
-          <p className="GroupOrder_Description">
+          <h1 className='CommonHeader'>Order Bulk Food for <span>Group in Train with Brother Byte</span></h1>
+          <p className="CommonPera TL">
             Looking for bulk food order in train for your group? Brother Byte makes it easy! Order delicious food for your train journey and enjoy a memorable experience with us.
           </p>
           <button className="CommonBTN GroupOrder_BTN"  onClick={() => navigate("/group-order")}>Group Order</button>

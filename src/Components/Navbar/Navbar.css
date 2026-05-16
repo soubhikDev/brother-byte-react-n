@@ -159,7 +159,6 @@
     padding: 9px 20px;
     background: var(--primary_100);
     color: #08080c;
-    font-family: var(--font-display);
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.02em;
@@ -315,7 +314,6 @@
 }
 
 .demo-hero h1 {
-    font-family: var(--font-display);
     font-size: clamp(40px, 8vw, 96px);
     font-weight: 800;
     letter-spacing: -0.04em;

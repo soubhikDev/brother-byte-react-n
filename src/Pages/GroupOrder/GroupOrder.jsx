@@ -188,7 +188,7 @@ export default function GroupOrder() {
       answer: (
         <>
           <p>It is quite easy, as teams traveling for official visits can contact us through our website and fill out the group order form. This will help you to send a query mentioning your food preferences.</p>
-          <p>Also, you can easily download the website of RajBhogkhana at the Google Play Store app and order your group food orders.</p>
+          <p>Also, you can easily download the website of Brother Byte at the Google Play Store app and order your group food orders.</p>
         </>
       )
     },

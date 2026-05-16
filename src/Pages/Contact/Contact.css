@@ -1,34 +1,6 @@
-.ContactMain .PageHeroMain{
-    background: url(/src/assets/ContactHeroBackground.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.ContactMain h2{
-        font-size: clamp(2.4rem, 5.5vw, 4.2rem);
-    font-weight: 900;
-    line-height: 1.1;
-    color: #84b524;
-    letter-spacing: -0.02em;
-    text-align: center;
-    margin-top: 50px;
-}
-.ContactMain h2 span{
-    display: inline-block;
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 60%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-.ContactMain p{
-        font-size: 15px;
-    color: var(--muted);
-    margin-top: 20px;
-    font-weight: 300;
-    max-width: 660px;
-    margin-inline: auto;
-    line-height: 1.7;
-    text-align: center;
+
+.contact_form_wrpr{
+  padding: 50px 0;
 }
 .C_form_main{
   padding: 20px;

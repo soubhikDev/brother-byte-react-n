@@ -82,7 +82,6 @@
 }
 
 .faq-title {
-  font-family: 'Sora', sans-serif;
   font-size: clamp(28px, 5vw, 48px);
   font-weight: 700;
   margin-bottom: 12px;

@@ -34,9 +34,9 @@ export default function WhyChooseUs() {
     <section className="WhyChooseUsSection">
       <div className="WhyChooseUsContent common_width">
         <div className="WhyChooseUsHeader">
-          <p className="WhyChooseUsIntro">Why Choose Us</p>
-          <h1 className="CommonHeader">Why Choose Us To Food in Train</h1>
-          <p className="WhyChooseUsSubtext">
+          <p className="CommonEyebrow">Why Choose Us</p>
+          <h1 className="CommonHeader">Why Choose Us To <span>Food in Train</span></h1>
+          <p className="CommonPera">
             Brother Byte delivers delicious train meals with trusted quality, wide coverage, and on-time service across India.
           </p>
         </div>

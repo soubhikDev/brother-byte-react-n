@@ -1,0 +1,10 @@
+.tcMain_wrpr{
+    margin: 50px auto;
+    background: #f9f1f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+.tcMain_wrpr .CommonPera{
+    max-width: none;
+    text-align: left;
+}

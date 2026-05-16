@@ -9,8 +9,8 @@ export default function RestaurantOwner() {
     <div className="RestaurantOwnerMain">
       <div className="RestaurantOwner_TextSection">
         <div className="RestaurantOwner_Content">
-          <h1>Are You A <span>Restaurant Owner?</span></h1>
-          <p className="RestaurantOwner_Description">
+          <h1 className='CommonHeader'>Are You A <span>Restaurant Owner?</span></h1>
+          <p className="CommonPera TL">
             Expand your business online, boost your brand and sales. <br />
 Register your restaurant to become an authorized IRCTC e-Catering Vendor and deliver your delicious food to train passengers across the country. <br />
 Register now to start delivering food on trains today.

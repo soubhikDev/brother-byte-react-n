@@ -80,7 +80,7 @@ export default function LatestOrder() {
     <div className="LatestOrderMain">
       <div className="LatestOrder_Wrapper">
         <div className="LatestOrder_Header">
-          <h2>Latest Orders</h2>
+          <h2 className="CommonHeader">Latest <span>Orders</span></h2>
         </div>
         <div className="LatestOrder_Carousel">
           {visibleCards.map((card, index) => (

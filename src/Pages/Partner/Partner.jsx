@@ -62,11 +62,11 @@ export default function Partner() {
         <div className="common_width PartnerHowItWorks_inner">
 
           <div className="PartnerHowItWorks_header">
-            <div className="tag">Partnership Process</div>
-            <h2>
+            <div className="CommonEyebrow">Partnership Process</div>
+            <h2 className="CommonHeader">
               How It <span>Works?</span>
             </h2>
-            <p className="subtitle">
+            <p className="CommonPera">
               Simple 4-step process to get your restaurant onboard and start serving passengers across India.
             </p>
           </div>

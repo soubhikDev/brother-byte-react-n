@@ -10,7 +10,7 @@ export default function Discount() {
     <>
         <div className="DiscountMain">
             <div className="textDiscountSection">
-                <h1>Latest Discount</h1>
+                <h1 className="CommonHeader">Enjoy Our Special Offers On <span>Train Food Delivery</span></h1>
                 {/* <h2>Please Enter Your E-Mail</h2>
                 <div className="inputSection">
                     <TextField id="outlined-basic" label="Email" variant="outlined" />

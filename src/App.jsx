@@ -12,6 +12,11 @@ import BlogDetail from "./Pages/Blog/BlogDetail";
 import Partner from "./Pages/Partner/Partner";
 import RestaurantPnr from "./Pages/RestaurantPnr/RestaurantPnr";
 import StationMenu from "./Pages/StationMenu/StationMenu";
+import Payment from "./Pages/Payment/Payment";
+import OrderHistory from "./Pages/OrderHistory/OrderHistory";
+import TermCondition from "./Pages/TermCondition/TermCondition";
+import SignIn from "./Pages/SignIn/SignIn";
+import SignUp from "./Pages/SignUp/SignUp";
 
 
   const customTheme = (outerTheme) =>
@@ -98,6 +103,11 @@ function App() {
           <Route path="/restaurant-pnr" element={<RestaurantPnr />} />
           <Route path="/station-menu/:restaurant" element={<StationMenu />} />
           <Route path="/partner" element={<Partner />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/order-history" element={<OrderHistory />} />
+          <Route path="/terms-conditions" element={<TermCondition />} />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} />
         </Route>
 
       </Routes>

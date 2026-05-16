@@ -22,6 +22,7 @@ import HomeDocument from '../../Components/HomeDocument/HomeDocument'
 import FAQ from '../../Components/FAQ/FAQ'
 import BlogCard from '../../Components/BlogCard/BlogCard'
 import { BlogData } from '../../../BlogData.js'
+import HowItWorks from '../../Components/HowItWorks/HowItWorks'
 
 export default function Home() {
   const brand = [
@@ -115,7 +116,7 @@ export default function Home() {
       answer: (
         <>
           <p>It is quite easy, as teams traveling for official visits can contact us through our website and fill out the group order form. This will help you to send a query mentioning your food preferences.</p>
-          <p>Also, you can easily download the website of RajBhogkhana at the Google Play Store app and order your group food orders.</p>
+          <p>Also, you can easily download the website of Brother Byte at the Google Play Store app and order your group food orders.</p>
         </>
       )
     },
@@ -170,7 +171,7 @@ export default function Home() {
         <div className="common_width">
           <SearchPNR />
           <div className="HTO_mainWrpr">
-            <h1 className="CommonHeader">How To Order Food in <span>Train With Borther Byte</span></h1>
+            {/* <h1 className="CommonHeader">How To Order Food in <span>Train With Borther Byte</span></h1>
             <div className="HTO_wrpr">
               <div className="card_HTO">
                 <img src={EnterYourPNR} />
@@ -188,7 +189,8 @@ export default function Home() {
                 <img src={GetFoodDelivery} />
                 <h2>Receive Food at Your Seat</h2>
               </div>
-            </div>
+            </div> */}
+            <HowItWorks />
           </div>
           <Discount />
           {/* <div className="Brand_wrpr">

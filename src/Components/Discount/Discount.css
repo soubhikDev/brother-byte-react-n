@@ -4,10 +4,6 @@
     align-items: center;
     margin-top: 100px;
     width: 100%;
-    background: linear-gradient(180deg,var(--amber)0%,var(--gold-pale) 100%);
-    /* min-height: 340px; */
-    padding: 10px;
-    border-radius: 10px;
     margin-bottom: 100px;
 
 }
@@ -25,29 +21,15 @@
 }
 .textDiscountSection {
     width: 100%;
-    background: var(--warm-white);  
     height: 100%;
-    padding: 30px;
-    border-radius: 10px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .textDiscountSection h1{
-    font-size: 4svw;
-    line-height: 4svw;
-    font-weight: 900;
-    color: #84b522;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+    margin-bottom: 30px;
 }
-.textDiscountSection h2{
-    font-size: 2svw;
-    font-weight: 900;
-    color: #b57322;
-    margin-top: -50px;
-    text-transform: uppercase;
-}
+
 .DiscountMain .inputSection{
     display: flex;
     justify-content: space-between;
@@ -80,6 +62,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    justify-items: center;
 }
 .couponsMapWrpr{
     background: #3fbeab36;
@@ -146,10 +129,6 @@
     .imageDiscountSection img{
         width: 440px;
     }
-    .textDiscountSection h1{
-        font-size: 4.5svw;
-        margin-bottom: 20px;
-    }
     .couponsMapWrpr h1{
     font-size: 3svw;
     }
@@ -157,10 +136,6 @@
 @media screen and (max-width: 1299px) {
     .imageDiscountSection img{
         width: 400px;
-    }
-    .textDiscountSection h1{
-        font-size: 4svw;
-        margin-bottom: 30px;
     }
     .couponsMapWrpr h1{
     font-size: 3svw;
@@ -185,11 +160,6 @@
     }
     .imageDiscountSection img{
         display: none;
-    }
-    .textDiscountSection h1 {
-        font-size: 60px;
-        margin-bottom: 20px;
-        line-height: 60px;
     }
     .couponsMapWrpr h2 {
     font-size: 4svh;
@@ -228,12 +198,11 @@
         font-size: 1.4svw;
         line-height: 1.3svw;
         }
-        
+    .coponesWrpr{
+        grid-template-columns: repeat(2, 1fr);
+    }    
 }
 @media screen and (max-width: 799px){
-        .coponesWrpr {
-            grid-template-columns: repeat(1, 1fr);
-        }
         .couponsMapWrpr h1 {
         font-size: 40px !important;
     }
@@ -259,11 +228,12 @@
     .DiscountMain .MuiButtonBase-root{
         width: 120px;
     }
-    .textDiscountSection h1 {
-        font-size: 40px;
-        line-height: 50px;
+    .coponesWrpr{
+        grid-template-columns: repeat(1, 1fr);
+    } 
+    .coupon-card {
+        max-width: none !important;
     }
-    
     .inputSection{
         flex-direction: column;
         gap: 15px;
@@ -276,10 +246,6 @@
     }
 }
 @media screen and (max-width: 499px){
-    .textDiscountSection h1 {
-        font-size: 30px;
-        line-height: 30px;
-    }
     .textDiscountSection{
         padding: 10px;
     }

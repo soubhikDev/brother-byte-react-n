@@ -112,11 +112,11 @@ export default function Testimonials() {
 
       <div className="TestimonialsContent common_width">
         <div className="TestimonialsHeader">
-          <p className="TestimonialsLabel">Testimonials</p>
+          <p className="CommonEyebrow">Testimonials</p>
           <h1 className="CommonHeader">
             Our Happy Customers — <span>Real Stories</span>
           </h1>
-          <p className="TestimonialsSubtext">
+          <p className="CommonPera">
             Thousands of travellers trust us every day. Here's what they say.
           </p>
         </div>

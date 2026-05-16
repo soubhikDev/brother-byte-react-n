@@ -62,8 +62,8 @@ export default function Contact() {
           <PageHero PageHeroData={{title: 'Contact Us', img: ContactHero}} />
           <div className="common_width">
             <div className="contact_form_wrpr">
-              <h2>Any <span>Questions</span></h2>
-              <p>If you have any questions or concerns about our food delivery services, please fill out the contact form below.</p>
+              <h2 className='CommonHeader'>Any <span>Questions</span></h2>
+              <p className='CommonPera'>If you have any questions or concerns about our food delivery services, please fill out the contact form below.</p>
               <div className="C_form_main">
                 <TextField id="outlined-basic" fullWidth label="Name" variant="outlined" />
                 <TextField id="outlined-basic" fullWidth label="Email" variant="outlined" />
@@ -74,8 +74,8 @@ export default function Contact() {
               </div>
             </div>
             <div className="contactSub">
-              <h2>Get in <span>Touch</span></h2>
-              <p>We'd love to hear from you! Whether you have a question about our menu, want to provide feedback, or just want to say hello, feel free to reach out to us.</p>
+              <h2 className='CommonHeader'>Get in <span>Touch</span></h2>
+              <p className='CommonPera'>We'd love to hear from you! Whether you have a question about our menu, want to provide feedback, or just want to say hello, feel free to reach out to us.</p>
               <div className="ContactWrpr">
                 <div className="ContactImG">
                   <img src={ContactBlock1} alt="Contact Us" />
@@ -111,9 +111,9 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <div className="contact_map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d748.8864035525829!2d76.7947058349174!3d30.354706909966442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fc951abaf45a5%3A0xeac1b759d9574ab1!2sRajbhog%20Khana%20-%20Order%20Food%20in%20Train%20%7C%20Food%20Delivery%20in%20Train!5e1!3m2!1sen!2sin!4v1778237184904!5m2!1sen!2sin" width='100%' height='100%' allowfullscreen frameBorder='0' loading="lazy" ></iframe>
-            </div>
+            {/* <div className="contact_map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d748.8864035525829!2d76.7947058349174!3d30.354706909966442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fc951abaf45a5%3A0xeac1b759d9574ab1!2sRajbhog%20Khana%20-%20Order%20Food%20in%20Train%20%7C%20Food%20Delivery%20in%20Train!5e1!3m2!1sen!2sin!4v1778237184904!5m2!1sen!2sin" width='100%' height='100%' frameBorder='0' loading="lazy" ></iframe>
+            </div> */}
           </div>
         </div>
     </>

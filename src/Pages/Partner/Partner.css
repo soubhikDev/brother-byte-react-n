@@ -44,51 +44,6 @@
   margin-bottom: 64px;
 }
 
-.PartnerHowItWorks_header .tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--primary_B300);
-  color: var(--primary_D100);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  padding: 6px 14px;
-  border-radius: 100px;
-  margin-bottom: 16px;
-}
-
-.PartnerHowItWorks_header .tag::before {
-  content: '';
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--primary_100);
-}
-
-.PartnerHowItWorks_header h2 {
-  margin: 0;
-  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
-  font-weight: 900;
-  color: var(--text_100);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-
-.PartnerHowItWorks_header h2 span {
-  color: var(--primary_100);
-}
-
-.PartnerHowItWorks_header .subtitle {
-  margin: 12px auto 0;
-  max-width: 480px;
-  color: var(--text_200);
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
 /* ─── Steps Grid ───────────────────────────────────────────────── */
 
 .PartnerSteps {

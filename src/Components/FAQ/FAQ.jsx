@@ -133,7 +133,7 @@ const toggleFAQ = (id) => {
         {/* Header */}
         <div className="faq-header">
           {/* <div className="faq-label">Our FAQs</div> */}
-          <div className="eyebrow">
+          <div className="CommonEyebrow">
             How It Works
           </div>
           <h1 className="CommonHeader">FREQUENTLY ASKED <span>QUESTIONS</span></h1>
